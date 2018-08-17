@@ -20,6 +20,13 @@ const createFareMultiplier = function (num) {
 const fareDoubler = createFareMultiplier(2);
 const fareTripler = createFareMultiplier(3);
 
-function selectDifferentDrivers(drivers, cb) {
-  return cb(drivers);
+function selectDifferentDrivers(drivers, fn) {
+  /* returnFirstTwoDrivers
+      ƒ (drivers) {
+      return drivers.slice(0,2);
+
+      returnLastTwoDrivers
+      ƒ (drivers) {
+      return drivers.slice(-2);  */
+  return fn(drivers);
 };
